@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myMoviesSeriesApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Movies & Series</title>
+    <!-- References external Libraries of directory vendor -->
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-route.min.js"></script>
+    <script src="vendor/angular-route-segment.js"></script>
+    <script src="vendor/tmhDynamicLocale.js"></script>
+    <script src="vendor/angular-translate.js"></script>
+    <!-- <script src="vendor/angular-locale_es-es.js"></script> -->
+    <!-- Add module -->
+    <script src="scripts/controllers/app.js"></script>
+    <!-- References Controllers-->
+    <script src="scripts/controllers/navigationCtrl.js"></script>
+    <script src="scripts/controllers/moviesCtrl.js"></script>
+    <script src="scripts/controllers/seriesCtrl.js"></script>
+    <script src="scripts/controllers/moviesDetailsCtrl.js"></script>
+    <script src="scripts/controllers/moviesComingSoonCtrl.js"></script>
+    <script src="scripts/controllers/moviesMovieListingsCtrl.js"></script>
+    <!-- References Services -->
+    <script src="scripts/services/ApiService.js"></script>
+    <!-- References Values -->
+    <script src="scripts/values/Settings.js"></script>
+    <!-- References Directives -->
+    <script src="scripts/directives/MediaItem.js"></script>
+    <script src="scripts/directives/Vote.js"></script>
+    <script src="scripts/directives/Genre.js"></script>
+    <!-- References Filters -->
+    <script src="scripts/filters/DateRelease.js"></script>
+    <!-- References ccs -->
+    <link rel="stylesheet" href="styles/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/css/styles.css"/>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Movies & Series</h1>
+    </header>
+
+    <nav ng-controller="navigationCtrl">
+        <ul class="nav nav-tabs">
+            <li ng-class="{ 'active': pathMovies() }">
+                <a href="#/movies">Movies</a>
+            </li>
+            <li ng-class="{ 'active': pathSeries() }">
+                <a href="#/series">Series</a>
+            </li>
+        </ul>
+    </nav>
+    <section app-view-segment="0"></section>
+</div>
+
+</body>
+</html>

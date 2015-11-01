@@ -1,0 +1,11 @@
+<nav>
+    <ul class="nav nav-tabs">
+        <li ng-class="{ 'active': pathComingSoon()}">
+            <a href="#/movies/comingsoon">Comming soon</a>
+        </li>
+        <li ng-class="{ 'active': pathMovieListings()}">
+            <a href="#/movies/movielistings">Movie listings</a>
+        </li>
+    </ul>
+</nav>
+<section app-view-segment="1"></section>

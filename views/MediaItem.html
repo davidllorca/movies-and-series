@@ -1,0 +1,9 @@
+<tr>
+    <td>
+        <img ng-src="{{ imagePath(data.poster_path) }}" class="img-thumbnail"/>
+    </td>
+    <td>
+        <a href="" ng-click="clickOnMedia(data.id)">{{ data.title }}</a>
+    </td>
+    <td>{{ data.release_date | date:'dd/MM/yyyy' | dateRelease }}</td>
+</tr>

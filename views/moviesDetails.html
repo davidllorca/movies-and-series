@@ -1,0 +1,6 @@
+<header>
+    <h4>{{movie.title}}</h4>
+    <vote avg="{{ movie.vote_average }}"></vote>
+    <genre collection="movie.genres"></genre>
+</header>
+<img ng-src="{{ imagePath(movie.poster_path) }}" class="img-thumbnail" />
